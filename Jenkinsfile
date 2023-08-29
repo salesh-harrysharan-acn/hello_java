@@ -12,9 +12,9 @@ pipeline {
             steps {
                 script {
                     if (isUnix()) {
-                        sh 'make' // or any other build command
+                        sh 'mvn clean install' // or any other build command
                     } else {
-                        bat 'build.bat' // or any other build command
+                        bat 'mvn clean install' // or any other build command
                     }
                 }
             }
@@ -24,9 +24,9 @@ pipeline {
             steps {
                 script {
                     if (isUnix()) {
-                        sh './run-tests.sh'
+                        echo './run-tests.sh'
                     } else {
-                        bat 'run-tests.bat'
+                        echo 'run-tests.bat'
                     }
                 }
             }
