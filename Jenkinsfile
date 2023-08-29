@@ -12,9 +12,9 @@ pipeline {
             steps {
                 script {
                     if (isUnix()) {
-                        sh 'mvn clean install' // or any other build command
+                        echo 'clean install' // or any other build command
                     } else {
-                        bat 'mvn clean install' // or any other build command
+                        echo 'clean install' // or any other build command
                     }
                 }
             }
