@@ -1,5 +1,5 @@
 public class HelloWorld {
-    public String sayHello() {
+    public static void main(String[] args){
         return "Hello, World!";
     }
 }
